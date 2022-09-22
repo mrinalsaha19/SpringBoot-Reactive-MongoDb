@@ -1,5 +1,6 @@
 package com.javatech.webflux.dto;
 
+import com.javatech.webflux.entity.Product;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,12 +10,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductDTO {
+public class CustomerDTO {
 
     public String id;
     public String name;
-    public String qty;
-    public Double price;
-    public String updateDate;
-
+    public ProductDTO product;
 }
