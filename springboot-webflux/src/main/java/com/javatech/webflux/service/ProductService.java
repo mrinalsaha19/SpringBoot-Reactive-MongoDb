@@ -59,6 +59,6 @@ public class ProductService {
     }
 
     public Flux<ProductDTO> getCustomProduct(String name, String qty) {
-       return repository.findByNameAndQuery(name, qty);
+       return repository.findByNameAndQty(name, qty);
     }
 }

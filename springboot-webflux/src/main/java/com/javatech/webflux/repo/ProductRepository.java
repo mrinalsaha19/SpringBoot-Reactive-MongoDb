@@ -12,5 +12,5 @@ import reactor.core.publisher.Flux;
 public interface ProductRepository extends ReactiveMongoRepository<Product,String> {
     Flux<ProductDTO> findByPriceBetween(Range<Double> priceRange);
     @Query("{$and: [{name: ?0}, {qty: ?1}]}")
-    Flux<ProductDTO> findByNameAndQuery(String name, String qty);
+    Flux<ProductDTO> findByNameAndQty(String name, String qty);
 }
