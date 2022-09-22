@@ -39,3 +39,9 @@ GET: http://localhost:8088/products
 
 # 4. Delete a single product
 DETELE: http://localhost:8088/products/delete/{id}
+
+
+
+# Mongo reference:
+https://docs.spring.io/spring-data/mongodb/docs/1.2.x/reference/html/mongo.repositories.html
+https://www.mongodb.com/docs/manual/tutorial/getting-started/
