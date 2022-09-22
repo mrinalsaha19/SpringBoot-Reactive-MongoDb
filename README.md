@@ -1,4 +1,5 @@
 # SpringBoot-Reactive-MongoDb
+This is a spring boot reactive application with Rest calls to get data from mongodb.
 App localhost
 http://localhost:8088/
 # Start the mongodb instance 
