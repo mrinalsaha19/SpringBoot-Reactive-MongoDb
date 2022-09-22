@@ -1,6 +1,7 @@
 package com.javatech.webflux.service;
 
 import com.javatech.webflux.dto.ProductDTO;
+import com.javatech.webflux.entity.Product;
 import com.javatech.webflux.repo.ProductRepository;
 import com.javatech.webflux.utils.AppUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +53,12 @@ public class ProductService {
                 .map(AppUtils::entityToDto);
     }
     public Mono<String> deleteProduct(String id) {
+
          repository.deleteById(id);
         return Mono.just("Deleted: "+ id);
+    }
+
+    public Flux<ProductDTO> getCustomProduct(String name, String qty) {
+       return repository.findByNameAndQuery(name, qty);
     }
 }

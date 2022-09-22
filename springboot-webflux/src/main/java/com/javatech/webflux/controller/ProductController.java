@@ -51,6 +51,9 @@ public class ProductController {
         return service.deleteProduct(id);
     }
 
-
+    @GetMapping("/{name}/{qty}")
+    public Flux<ProductDTO> getProductByNameAndQty(@PathVariable String name, @PathVariable String qty) {
+        return service.getCustomProduct(name,qty);
+    }
 
 }
